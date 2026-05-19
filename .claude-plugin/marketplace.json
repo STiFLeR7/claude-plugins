@@ -1,0 +1,44 @@
+{
+  "name": "stifler-marketplace",
+  "owner": {
+    "name": "Hill Patel",
+    "email": "hill.patel@cloudredux.com",
+    "url": "https://github.com/STiFLeR7"
+  },
+  "metadata": {
+    "description": "Personal Claude Code marketplace by STiFLeR7 — memex (persistent agent memory via temporal knowledge graph) and prompt-forge (multi-perspective prompt refinement).",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "memex-mcp",
+      "source": "./memex-mcp",
+      "description": "Persistent memory for AI coding agents. Builds a temporal knowledge graph of your codebase and serves it to any MCP-compatible agent — every session starts knowing your architecture, decisions, and open problems.",
+      "version": "0.3.2",
+      "category": "memory",
+      "tags": ["mcp", "knowledge-graph", "memory", "neo4j", "gemini", "context"],
+      "license": "MIT",
+      "homepage": "https://github.com/STiFLeR7/memex",
+      "repository": "https://github.com/STiFLeR7/memex",
+      "authors": [
+        { "name": "Hill Patel", "email": "hill.patel@cloudredux.com" },
+        { "name": "Nirvaan Lagishetty", "email": "nirvaanlagishetty@gmail.com" }
+      ]
+    },
+    {
+      "name": "prompt-forge",
+      "source": "./prompt-forge",
+      "description": "Advanced prompt refinement skill — extracts your real intent, investigates your codebase, and applies 9 perspective lenses (Security, QA, UX, Performance, …) before producing a grounded prompt for your execution tool.",
+      "version": "1.0.0",
+      "category": "skills",
+      "tags": ["prompt-engineering", "grounding", "intent-extraction", "claude-code", "agentic-workflows"],
+      "license": "MIT",
+      "homepage": "https://github.com/STiFLeR7/prompt-forge",
+      "repository": "https://github.com/STiFLeR7/prompt-forge",
+      "authors": [
+        { "name": "STiFLeR7", "email": "hill.patel@cloudredux.com" },
+        { "name": "Nirvaan05", "email": "nirvaanlagishetty@gmail.com" }
+      ]
+    }
+  ]
+}

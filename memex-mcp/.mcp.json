@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "memex": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "stifler-memex-mcp", "serve", "--repo", "."]
+    }
+  }
+}

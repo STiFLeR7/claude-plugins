@@ -1,0 +1,6 @@
+{
+  "name": "prompt-forge",
+  "description": "Advanced prompt refinement skill for Claude Code that extracts intent, investigates context, and applies multi-perspective lenses.",
+  "version": "1.0.0",
+  "contextFileName": "GEMINI.md"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "memex-mcp",
+  "version": "0.3.2",
+  "description": "Persistent memory for your AI coding agents. memex builds a temporal knowledge graph of your codebase and serves it to any MCP-compatible agent — every session starts knowing your architecture, your decisions, and your open problems. No more cold starts, no more context pasting.",
+  "authors": [
+    {
+      "name": "Hill Patel",
+      "email": "hill.patel@cloudredux.com",
+      "url": "https://github.com/STiFLeR7"
+    },
+    {
+      "name": "Nirvaan Lagishetty",
+      "email": "nirvaanlagishetty@gmail.com",
+      "url": "https://github.com/Nirvaan05"
+    }
+  ],
+  "homepage": "https://github.com/STiFLeR7/memex",
+  "repository": "https://github.com/STiFLeR7/memex",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "memory",
+    "knowledge-graph",
+    "neo4j",
+    "gemini",
+    "claude-code",
+    "temporal-graph",
+    "ai-agents",
+    "context",
+    "developer-tools"
+  ]
+}

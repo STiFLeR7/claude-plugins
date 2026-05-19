@@ -1,0 +1,25 @@
+{
+  "name": "prompt-forge",
+  "description": "Advanced prompt refinement skill for Claude Code that extracts intent, investigates context, and applies multi-perspective lenses.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "STiFLeR7",
+      "email": "hill.patel@cloudredux.com"
+    },
+    {
+      "name": "Nirvaan05",
+      "email": "nirvaanlagishetty@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/StiFLeR7/prompt-forge",
+  "repository": "https://github.com/StiFLeR7/prompt-forge",
+  "license": "MIT",
+  "keywords": [
+    "prompt-engineering",
+    "claude-code",
+    "grounding",
+    "intent-extraction",
+    "agentic-workflows"
+  ]
+}
