@@ -1,5 +1,10 @@
 # STiFLeR's Claude Code Plugins
 
+[![GitHub stars](https://img.shields.io/github/stars/STiFLeR7/claude-plugins?style=flat)](https://github.com/STiFLeR7/claude-plugins/stargazers)
+[![memex-mcp on npm](https://img.shields.io/npm/dm/stifler-memex-mcp?label=memex-mcp%20installs)](https://www.npmjs.com/package/stifler-memex-mcp)
+[![memex-mcp on PyPI](https://img.shields.io/pypi/dm/memex-mcp?label=memex-mcp%20pypi)](https://pypistats.org/packages/memex-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 A small, opinionated marketplace of Claude Code plugins focused on making agents *remember* and *understand intent*.
 
 ```
