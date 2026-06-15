@@ -22,10 +22,12 @@ jobs:
           set -euo pipefail
           mkdir -p metrics
           STAMP=$(date -u +%Y-%m-%d)
-          gh api repos/${{ github.repository }}/traffic/clones    > "metrics/clones-${STAMP}.json"
-          gh api repos/${{ github.repository }}/traffic/views     > "metrics/views-${STAMP}.json"
-          gh api repos/${{ github.repository }}/traffic/popular/referrers > "metrics/referrers-${STAMP}.json"
-          gh api repos/${{ github.repository }}/traffic/popular/paths     > "metrics/paths-${STAMP}.json"
+
+          # GitHub traffic API requires push access; handle 403 gracefully
+          gh api repos/${{ github.repository }}/traffic/clones     > "metrics/clones-${STAMP}.json"     2>/dev/null || echo '{"error": "traffic API not accessible"}' > "metrics/clones-${STAMP}.json"
+          gh api repos/${{ github.repository }}/traffic/views      > "metrics/views-${STAMP}.json"      2>/dev/null || echo '{"error": "traffic API not accessible"}' > "metrics/views-${STAMP}.json"
+          gh api repos/${{ github.repository }}/traffic/popular/referrers > "metrics/referrers-${STAMP}.json" 2>/dev/null || echo '{"error": "traffic API not accessible"}' > "metrics/referrers-${STAMP}.json"
+          gh api repos/${{ github.repository }}/traffic/popular/paths     > "metrics/paths-${STAMP}.json"     2>/dev/null || echo '{"error": "traffic API not accessible"}' > "metrics/paths-${STAMP}.json"
 
       - name: Commit snapshot
         run: |
