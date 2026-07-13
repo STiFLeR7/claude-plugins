@@ -2,7 +2,7 @@
 
 > Persistent memory for AI coding agents. Inspired by Vannevar Bush's 1945 concept of a machine that remembers everything.
 
-This plugin registers the [memex](https://github.com/STiFLeR7/memex) MCP server with Claude Code. Once installed, every Claude session has 14 tools for reading and writing to a temporal knowledge graph of your codebase.
+This plugin registers the [memex](https://github.com/STiFLeR7/memex) MCP server with Claude Code. Once installed, every Claude session has 13 tools for reading and writing to a temporal knowledge graph of your codebase.
 
 ## What it gives you
 
@@ -14,6 +14,7 @@ This plugin registers the [memex](https://github.com/STiFLeR7/memex) MCP server 
 | `get_open_problems` | To find active bugs and tech debt |
 | `search_context` | Hybrid search across the whole graph |
 | `get_stale_context` | Spot outdated documentation |
+| `get_context_briefing` | Compact scoped briefing for a module or the whole repo |
 | `explain_change` | After a commit — *why* did this happen? |
 | `predict_impact` | Before a refactor — *what* might break? |
 
@@ -54,7 +55,7 @@ npx stifler-memex-mcp watch --repo .
 
 Your next Claude Code session will see memex's tools in the MCP picker.
 
-## Highlights (v0.3.2)
+## Highlights (v0.7.0)
 
 - **Bitemporal knowledge graph** — every fact has a creation time and an optional invalidation time
 - **Two-regime confidence decay** — unvalidated facts cross the staleness threshold at exactly 30 days
@@ -62,5 +63,7 @@ Your next Claude Code session will see memex's tools in the MCP picker.
 - **Hierarchical clusters** — `get_project_context()` stays under 1500 tokens no matter how big the repo
 - **Write governance** — per-node-type ACL, intent-confirmation on agent writes, explicit corroborates/supersedes semantics
 - **Multi-repo aware** — single watcher and MCP server manages hundreds of repos with zero-config switching
+- **Per-agent attribution** — every write records which harness (Claude Code, Gemini CLI, …) produced it
+- **Team-ready** — RBAC (viewer/contributor/admin), a shared project graph across developers, a browser dashboard for activity/confidence/conflicts, and a self-hosted Docker Compose deployment for shared teams
 
 Full docs: <https://github.com/STiFLeR7/memex>
