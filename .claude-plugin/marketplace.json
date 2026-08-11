@@ -14,7 +14,7 @@
       "name": "memex-mcp",
       "source": "./memex-mcp",
       "description": "Persistent memory for AI coding agents. Builds a temporal knowledge graph of your codebase and serves it to any MCP-compatible agent — every session starts knowing your architecture, decisions, and open problems.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "category": "memory",
       "tags": ["mcp", "knowledge-graph", "memory", "neo4j", "gemini", "context"],
       "license": "MIT",

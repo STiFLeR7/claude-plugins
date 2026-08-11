@@ -55,15 +55,17 @@ npx stifler-memex-mcp watch --repo .
 
 Your next Claude Code session will see memex's tools in the MCP picker.
 
-## Highlights (v0.7.0)
+## Highlights (v0.8.0)
 
 - **Bitemporal knowledge graph** — every fact has a creation time and an optional invalidation time
 - **Two-regime confidence decay** — unvalidated facts cross the staleness threshold at exactly 30 days
 - **Human-in-the-loop validation** — `npx stifler-memex-mcp review` opens a TUI for lowest-confidence-first review
-- **Hierarchical clusters** — `get_project_context()` stays under 1500 tokens no matter how big the repo
+- **Hierarchical clusters** — `get_project_context()` stays under 1500 tokens no matter how big the repo, with a dedicated cluster-only dashboard graph view for large codebases
 - **Write governance** — per-node-type ACL, intent-confirmation on agent writes, explicit corroborates/supersedes semantics
 - **Multi-repo aware** — single watcher and MCP server manages hundreds of repos with zero-config switching
 - **Per-agent attribution** — every write records which harness (Claude Code, Gemini CLI, …) produced it
 - **Team-ready** — RBAC (viewer/contributor/admin), a shared project graph across developers, a browser dashboard for activity/confidence/conflicts, and a self-hosted Docker Compose deployment for shared teams
+- **Pluggable dashboard auth** — session login by default, with an `AuthProvider` architecture ready for OIDC/SSO
+- **Governance report delivery** — optional weekly Slack and email delivery of the write-governance report, alongside the existing local file
 
 Full docs: <https://github.com/STiFLeR7/memex>
