@@ -6,17 +6,17 @@
     "url": "https://github.com/STiFLeR7"
   },
   "metadata": {
-    "description": "Personal Claude Code marketplace by STiFLeR7 — memex (persistent agent memory via temporal knowledge graph) and prompt-forge (multi-perspective prompt refinement).",
+    "description": "Personal Claude Code marketplace by STiFLeR7 — memex (trusted engineering context via temporal knowledge graph) and prompt-forge (multi-perspective prompt refinement).",
     "version": "0.1.0"
   },
   "plugins": [
     {
       "name": "memex-mcp",
       "source": "./memex-mcp",
-      "description": "Persistent memory for AI coding agents. Builds a temporal knowledge graph of your codebase and serves it to any MCP-compatible agent — every session starts knowing your architecture, decisions, and open problems.",
-      "version": "0.8.0",
+      "description": "Trusted engineering context for AI coding agents. Builds a temporal knowledge graph and serves bounded, provenance-aware context through MCP.",
+      "version": "0.9.0",
       "category": "memory",
-      "tags": ["mcp", "knowledge-graph", "memory", "neo4j", "gemini", "context"],
+      "tags": ["mcp", "knowledge-graph", "memory", "neo4j", "context", "provenance", "agentic-engineering"],
       "license": "MIT",
       "homepage": "https://github.com/STiFLeR7/memex",
       "repository": "https://github.com/STiFLeR7/memex",

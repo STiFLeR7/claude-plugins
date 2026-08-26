@@ -5,7 +5,7 @@
 [![memex-mcp on PyPI](https://img.shields.io/pypi/dm/memex-mcp?label=memex-mcp%20pypi)](https://pypistats.org/packages/memex-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A small, opinionated marketplace of Claude Code plugins focused on making agents *remember* and *understand intent*.
+A small, opinionated marketplace of Claude Code plugins focused on durable engineering context and grounded agent workflows.
 
 ```
 /plugin marketplace add STiFLeR7/claude-plugins
@@ -17,17 +17,17 @@ A small, opinionated marketplace of Claude Code plugins focused on making agents
 
 ### 🧠 [memex-mcp](./memex-mcp)
 
-Persistent memory for AI coding agents. Builds a temporal knowledge graph of your codebase and serves it through 14 MCP tools — `get_project_context`, `record_decision`, `predict_impact`, `explain_change`, and more.
+Trusted engineering context for AI coding agents. Builds a temporal knowledge graph of your repository and exposes bounded, provenance-aware context through 14 MCP tools — `get_project_context`, `record_decision`, `predict_impact`, `explain_change`, and more.
 
-Every Claude session starts knowing your architecture, your decisions, and your open problems. No more cold starts. No more context pasting.
+Claude Code can explicitly recover your architecture, decisions, open problems, and code relationships without treating the plugin as a replacement for Git or Claude's own session memory.
 
-- Bitemporal facts (every edge knows when it was true)
-- Two-regime confidence decay (unvalidated facts cross stale at exactly 30 days)
-- Hierarchical clusters (briefing stays under 1500 tokens regardless of repo size)
+- Bitemporal facts with expiry and supersession
+- Confidence decay, validation, corroboration, and stale-context review
+- Bounded `ContextPacket` projections with provenance and selection reasons
 - Human-in-the-loop validation via `memex review`
-- Anthropic memory-tool backend included
+- Explicit, governed writes for decisions, problems, resolutions, and invalidation
 
-Backed by Neo4j + Graphiti + Gemini Flash. MIT licensed. → [github.com/STiFLeR7/memex](https://github.com/STiFLeR7/memex)
+Backed by Neo4j + Graphiti; optional LLM backends support synthesis and explanation. MIT licensed. → [github.com/STiFLeR7/memex](https://github.com/STiFLeR7/memex)
 
 ### ✍️ [prompt-forge](./prompt-forge)
 
