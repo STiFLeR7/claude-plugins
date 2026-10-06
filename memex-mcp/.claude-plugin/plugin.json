@@ -1,7 +1,7 @@
 {
   "name": "memex-mcp",
-  "version": "0.3.2",
-  "description": "Persistent memory for your AI coding agents. memex builds a temporal knowledge graph of your codebase and serves it to any MCP-compatible agent — every session starts knowing your architecture, your decisions, and your open problems. No more cold starts, no more context pasting.",
+  "version": "1.0.0",
+  "description": "Trusted engineering context for AI coding agents. memex keeps Claude Code and Codex sessions current as the code changes: a bounded working set at session start, a check before each edit, and a scoped correction when the context it rests on no longer holds.",
   "authors": [
     {
       "name": "Hill Patel",

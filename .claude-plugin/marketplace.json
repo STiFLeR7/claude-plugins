@@ -13,8 +13,8 @@
     {
       "name": "memex-mcp",
       "source": "./memex-mcp",
-      "description": "Trusted engineering context for AI coding agents. Builds a temporal knowledge graph and serves bounded, provenance-aware context through MCP.",
-      "version": "0.9.0",
+      "description": "Trusted engineering context for AI coding agents. Keeps Claude Code and Codex sessions current as the code changes, with checks before edits and scoped corrections.",
+      "version": "1.0.0",
       "category": "memory",
       "tags": ["mcp", "knowledge-graph", "memory", "neo4j", "context", "provenance", "agentic-engineering"],
       "license": "MIT",

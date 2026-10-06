@@ -2,7 +2,9 @@
 
 > Trusted engineering context for AI coding agents.
 
-This plugin registers the [memex](https://github.com/STiFLeR7/memex) MCP server with Claude Code. Version 0.9 exposes 14 tools for explicit retrieval and governed writes against a temporal knowledge graph of your repository.
+This plugin registers the [memex](https://github.com/STiFLeR7/memex) MCP server with Claude Code: 14 tools for explicit retrieval and governed writes against a temporal knowledge graph of your repository.
+
+memex v1.0.0 adds **live context**: hooks that keep Claude Code and Codex sessions current as the code changes. See [Live context (v1)](#live-context-v1).
 
 ## What it gives you
 
@@ -64,7 +66,26 @@ path is explicit: Claude invokes context and write operations when needed.
 This plugin does not replace Claude's own session memory or persist raw
 prompts, transcripts, tool results, or host state.
 
-## Highlights (v0.9.0)
+## Live context (v1)
+
+v1 hooks into the host client so context stays current without the agent asking:
+
+- **Session start:** a bounded working set, with delivery confirmed from the client's own session record.
+- **Before each edit:** memex checks whether the context the edit rests on still holds. If not, the edit is held, the agent gets a scoped correction, and it revises.
+- **On resume:** if the code changed while the session was away, memex names the files to re-read.
+- **Safe to try:** `memex v1 mode shadow` records what would be corrected without changing anything, hooks fail open, and `memex v1 rollback` stops memex at once.
+
+```bash
+uv tool install memex-mcp            # installs the `memex` command
+cd your-repo
+memex v1 doctor                      # what is set up, what is missing
+memex v1 install claude              # hooks in .claude/settings.json; global settings untouched
+memex v1 install codex --neo4j-uri bolt://localhost:7687   # optional, for Codex
+```
+
+Full guide: <https://github.com/STiFLeR7/memex/blob/master/docs/v1/25_ONBOARDING.md>
+
+## Highlights
 
 - **Bitemporal knowledge graph** — every fact has a creation time and an optional invalidation time
 - **Confidence and freshness** — validation, corroboration, expiry, and supersession remain visible
