@@ -5,15 +5,27 @@
 [![memex-mcp on PyPI](https://img.shields.io/pypi/dm/memex-mcp?label=memex-mcp%20pypi)](https://pypistats.org/packages/memex-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A small, opinionated marketplace of Claude Code plugins focused on durable engineering context and grounded agent workflows.
+A small, opinionated marketplace of Claude Code plugins focused on honest, grounded agent workflows and durable engineering context.
 
 ```
 /plugin marketplace add STiFLeR7/claude-plugins
+/plugin install pinocchio@stifler-marketplace
 /plugin install memex-mcp@stifler-marketplace
 /plugin install prompt-forge@stifler-marketplace
 ```
 
 ## Plugins
+
+### 🤥 [pinocchio](https://github.com/STiFLeR7/pinocchio)
+
+Your agent's nose grows when it lies. Every time Claude Code stops, Pinocchio checks the agent's claims ("done", "fixed", "tests pass", "I updated `auth.ts`") against what actually happened: test commands after the last edit, their exit codes, and what git says changed. When a claim is contradicted, the stop is blocked and the agent goes back and does the work. When it can't tell, it says so and doesn't block.
+
+- Four checks: `stale-tests`, `red-tests`, `phantom-edit`, and `tampering` (warn only)
+- Read-only and offline: no network, no telemetry, never runs your commands
+- ~93 tokens of context; fails open on any error
+- Placebo-controlled benchmark across 585 sessions → [BENCHMARKS.md](https://github.com/STiFLeR7/pinocchio/blob/master/BENCHMARKS.md)
+
+Guided install: `npx @stiflerxd/pinocchio setup`. MIT licensed. → [github.com/STiFLeR7/pinocchio](https://github.com/STiFLeR7/pinocchio)
 
 ### 🧠 [memex-mcp](./memex-mcp)
 

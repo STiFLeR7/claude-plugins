@@ -6,10 +6,22 @@
     "url": "https://github.com/STiFLeR7"
   },
   "metadata": {
-    "description": "Personal Claude Code marketplace by STiFLeR7 — memex (trusted engineering context via temporal knowledge graph) and prompt-forge (multi-perspective prompt refinement).",
-    "version": "0.1.0"
+    "description": "Personal Claude Code marketplace by STiFLeR7 — pinocchio (catches false \"tests pass\" claims), memex (trusted engineering context via temporal knowledge graph) and prompt-forge (multi-perspective prompt refinement).",
+    "version": "0.2.0"
   },
   "plugins": [
+    {
+      "name": "pinocchio",
+      "source": { "source": "github", "repo": "STiFLeR7/pinocchio" },
+      "description": "Your agent's nose grows when it lies. Checks \"done\", \"fixed\" and \"tests pass\" claims against the session's test runs, exit codes and git, and blocks the stop only when it has proof. Read-only, offline, ~93 tokens.",
+      "version": "0.1.0",
+      "category": "productivity",
+      "tags": ["hooks", "verification", "testing", "honesty", "claude-code", "agentic-engineering"],
+      "license": "MIT",
+      "homepage": "https://github.com/STiFLeR7/pinocchio",
+      "repository": "https://github.com/STiFLeR7/pinocchio",
+      "author": { "name": "STiFLeR7", "url": "https://github.com/STiFLeR7" }
+    },
     {
       "name": "memex-mcp",
       "source": "./memex-mcp",
